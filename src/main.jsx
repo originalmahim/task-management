@@ -11,6 +11,7 @@ import AuthProvider from './Components/Provider/AuthProvider';
 import Login from './Components/Login/Login';
 import SignUp from './Components/Login/SignUp';
 import Dashboard from './Components/Dashboard/Dashboard';
+import Whytask from './Components/Pages/whytask';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
     {
       path: '/dashboard',
       element: <Dashboard></Dashboard>
+    },
+    {
+      path: '/whytask',
+      element: <Whytask></Whytask>
     }
 
   ]
