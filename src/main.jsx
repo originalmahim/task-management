@@ -12,6 +12,7 @@ import Login from './Components/Login/Login';
 import SignUp from './Components/Login/SignUp';
 import Dashboard from './Components/Dashboard/Dashboard';
 import Whytask from './Components/Pages/whytask';
+import Faq from './Components/Pages/Faq';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
     {
       path: '/whytask',
       element: <Whytask></Whytask>
+    },
+    {
+      path: '/faq',
+      element: <Faq></Faq>
     }
 
   ]
