@@ -13,10 +13,12 @@ import SignUp from './Components/Login/SignUp';
 import Dashboard from './Components/Dashboard/Dashboard';
 import Whytask from './Components/Pages/whytask';
 import Faq from './Components/Pages/Faq';
+import Error from './Components/Pages/Error';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Header></Header>,
+    errorElement: <Error></Error> ,
     children: [
       {
       path: '/',

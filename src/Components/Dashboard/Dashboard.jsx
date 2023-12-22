@@ -89,17 +89,17 @@ const Dashboard = () => {
               <ul>
                 <li>
                   <NavLink to="/dashboard/profile" className="block p-4">
-                    My Profile
+                    Dashboard
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/dashboard/requested" className="block p-4">
-                    Requested Meals
+                    Add Task
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/dashboard/myreviews" className="block p-4">
-                    My Reviews
+                    Notification
                   </NavLink>
                 </li>
               </ul>

@@ -1,10 +1,10 @@
-// import  { useContext } from "react";
-// import { AuthContext } from "../../Providers/AuthProvider";
+ import  { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContex } from "../Provider/AuthProvider";
 
 const Home = () => {
-//   const { user } = useContext(AuthContext);
-const user = false;
+   const { user } = useContext(AuthContex);
+
   return (
     <div className="grid md:grid-cols-2 justify-center rounded items-center md:mt-40  mx-auto max-w-7xl mt-0 mb-10">
       <div className="col-span-1 order-2 md:order-1">
