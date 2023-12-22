@@ -1,9 +1,10 @@
 import { Link, NavLink, Outlet } from "react-router-dom";
 
-import {  useState } from "react";
+import {  useContext, useState } from "react";
 
-// import Swal from 'sweetalert2';
+ import Swal from 'sweetalert2';
 import Footer from "./Footer";
+import { AuthContex } from "../Provider/AuthProvider";
 const Header = () => {
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -12,19 +13,18 @@ const Header = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-          // const {user, LogOut} = useContext(AuthContex)
+          const {user, LogOut} = useContext(AuthContex)
 
-          // const handleLogOut = () => {
-          //           LogOut()
-          //           .then(() => {
-          //             Swal.fire(
-          //               'Loged Out',
-          //               'You have loged Out successfully',
-          //               'success'
-          //             )
-          //           })
-          //         }
-          const user = false;
+          const handleLogOut = () => {
+                    LogOut()
+                    .then(() => {
+                      Swal.fire(
+                        'Loged Out',
+                        'You have loged Out successfully',
+                        'success'
+                      )
+                    })
+                  }
           const links = <>
           
           <li className="flex">
@@ -59,9 +59,9 @@ const Header = () => {
           </span>Register</Link> 
           }
 
-        {user && (
+{user && (
         <div
-          className={`dropdown dropdown-end hover:dropdown hover:dropdown-end ${isDropdownOpen ? 'open' : ''}`}
+          className={`dropdown bg-white dropdown-end hover:dropdown hover:dropdown-end ${isDropdownOpen ? 'open' : ''}`}
           onMouseEnter={handleDropdownToggle}
           onMouseLeave={handleDropdownToggle}
         >
@@ -81,12 +81,12 @@ const Header = () => {
               <p className="text-sm text-gray-600">{user.email}</p>
             </div>
             <div className="mt-1">
-              <Link to="/dashboard" className="btn btn-sm bg-green-300">
+              <Link to="/dashboard" className="btn btn-sm text-white bg-green-600">
                 Dashboard
               </Link>
               <button
-          //       onClick={}
-                className="btn btn-sm bg-violet-300"
+                onClick={handleLogOut}
+                className="btn btn-sm text-white bg-red-500"
               >
                 LogOut
               </button>

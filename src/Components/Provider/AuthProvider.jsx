@@ -2,7 +2,6 @@ import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
 import app from "../../firebase.config";
-
 // import axios from "axios";
 
 const auth = getAuth(app);

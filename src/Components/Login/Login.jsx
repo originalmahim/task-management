@@ -1,3 +1,5 @@
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -5,15 +7,19 @@ import toast, { Toaster } from "react-hot-toast";
 
 import { useContext, useState } from "react";
 import { AuthContex } from "../Provider/AuthProvider";
+import app from "../../firebase.config";
 
 
 const Login = () => {
+          const auth = getAuth(app);
+          const provider = new GoogleAuthProvider();
+
   const [show, setShow] = useState(false);
   const [loggedError, setLoggedError] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
 
-  const { signInUser, signUpWithGoogle } = useContext(AuthContex);
+  const { LogIn } = useContext(AuthContex);
 
   const handelLogin = (e) => {
     e.preventDefault();
@@ -25,7 +31,7 @@ const Login = () => {
 
     setLoggedError("");
 
-    signInUser(email, password)
+    LogIn(email, password)
       .then((result) => {
         console.log(result.user);
         e.target.reset();
@@ -58,7 +64,7 @@ const Login = () => {
 
   const handelGoogleLogIn = (e) => {
     e.preventDefault();
-    signUpWithGoogle()
+    signInWithPopup(auth,provider)
       .then((result) => {
         console.log(result);
         const displayErrorToast = () => {
@@ -89,7 +95,7 @@ const Login = () => {
 
 
   return (
-    <div>
+    <div className="my-10">
       <div className="flex w-60 items-center text-center mx-auto px-6">
       </div>
       <div className="flex justify-center">
