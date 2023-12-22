@@ -14,6 +14,7 @@ import Dashboard from './Components/Dashboard/Dashboard';
 import Whytask from './Components/Pages/whytask';
 import Faq from './Components/Pages/Faq';
 import Error from './Components/Pages/Error';
+import Task from './Components/Pages/Task';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -34,7 +35,13 @@ const router = createBrowserRouter([
     },
     {
       path: '/dashboard',
-      element: <Dashboard></Dashboard>
+      element: <Dashboard></Dashboard>,
+      children: [
+        {
+          path: 'task',
+          element: <Task></Task>
+        }
+      ]
     },
     {
       path: '/whytask',

@@ -93,7 +93,7 @@ const Dashboard = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/dashboard/requested" className="block p-4">
+                  <NavLink to="/dashboard/task" className="block p-4">
                     Add Task
                   </NavLink>
                 </li>
