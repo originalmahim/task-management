@@ -4,11 +4,7 @@ const Footer = () => {
           <footer className="max-w-7xl mx-auto text-xl  px-4 divide-y ">
           <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
           <div className="lg:w-1/3">
-          <h1 className="flex items-center gap-1 text-2xl font-medium uppercase">
-          Career <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" className="flex-shrink-0 w-5 h-5 rounded-full text-violet-500 text-6xl">
-          <path d="M18.266 26.068l7.839-7.854 4.469 4.479c1.859 1.859 1.859 4.875 0 6.734l-1.104 1.104c-1.859 1.865-4.875 1.865-6.734 0zM30.563 2.531l-1.109-1.104c-1.859-1.859-4.875-1.859-6.734 0l-6.719 6.734-6.734-6.734c-1.859-1.859-4.875-1.859-6.734 0l-1.104 1.104c-1.859 1.859-1.859 4.875 0 6.734l6.734 6.734-6.734 6.734c-1.859 1.859-1.859 4.875 0 6.734l1.104 1.104c1.859 1.859 4.875 1.859 6.734 0l21.307-21.307c1.859-1.859 1.859-4.875 0-6.734z"></path>
-          </svg>
-          </h1>
+          <img className="h-12" src="https://i.ibb.co/d22V506/task-removebg-preview.png" alt="" />
           <p className="text-sm">#351/4 , Aftab Nagar, <br /> Badda, Dhaka - 1200</p>
           </div>
           <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
@@ -76,7 +72,7 @@ const Footer = () => {
           </div>
           </div>
           </div>
-          <div className="py-6 text-sm text-center dark:text-gray-400">© 2023 Career X. All rights reserved. Devloped By <a className="text-blue-400 hover:underline" href="https://www.facebook.com/Originallytareq">Tareq Aziz Mahim</a></div>
+          <div className="py-6 text-sm text-center dark:text-gray-400">© 2023 Task. All rights reserved. Devloped By <a className="text-blue-400 hover:underline" href="https://www.facebook.com/Originallytareq">Tareq Aziz Mahim</a></div>
           </footer>                           
           </div>
           );
